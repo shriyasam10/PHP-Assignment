@@ -2,6 +2,9 @@
 $date =  date('Y-m-d', time());
 echo "The value of \$date: ".$date."<br>";
 
+$newdate = str_replace("-","/",$date);
+echo "the value of \$newdate: ".$newdate."<br>";
+
 $tar = "2017/05/24";
 echo "The value of \$tar: ".$tar."<br>";
 
