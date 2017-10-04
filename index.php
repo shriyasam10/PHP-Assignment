@@ -22,8 +22,14 @@ class main
 	print_r($year);
 
 	$this->html .= htmlTags::horizontalRule();
+	
+	$this->html .= htmlTags::headingThree("Replace String Example");
+	$this->html .= stringManip::stringReplace('-','/',$date);
+	$this->html .= htmlTags::horizontalRule();
 
-
+	$this->html .= htmlTags::headingThree("Compare String Example");
+	$this->html .= stringManip::stringCompare($date,$tar);
+	$this->html .= htmlTags::horizontalRule();
 
 
 
