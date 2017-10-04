@@ -25,7 +25,23 @@ public function destruct()
 
 }
 
+class stringManip
 
+{
+
+static public function stringReplace($src,$target,$str)
+
+{
+
+return str_replace($src,$target,$str);
+
+}
+
+
+
+
+
+}
 
 
 
