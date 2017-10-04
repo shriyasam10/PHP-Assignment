@@ -23,31 +23,31 @@ class main
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("Replace String Example");
-	$this->html .= stringManipulation::stringReplace('-','/',$date);
+	$this->html .= stringManip::stringReplace('-','/',$date);
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("Compare String Example");
-	$this->html .= stringManipulation::stringCompare($date,$tar);
+	$this->html .= stringManip::stringCompare($date,$tar);
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("Word Count Example");
-	$this->html .= stringManipulation::stringWordcount($date);
+	$this->html .= stringManip::stringWordcount($date);
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("String Length Example");
-	$this->html .= stringManipulation::stringLength($date);
+	$this->html .= stringManip::stringLength($date);
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("ASCII Value Example");
-	$this->html .= stringManipulation::stringASCII('2');
+	$this->html .= stringManip::stringASCII('2');
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("Last two characters of the string are: ");
-	$this->html .= stringManipulation::stringCharacter($date,8);
+	$this->html .= stringManip::stringCharacter($date,8);
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("String into Array Example:");
-	$this->html .= stringManipulation::stringExplode("/",$date);
+	$this->html .= stringManip::stringExplode("/",$date);
 	$this->html .= htmlTags::horizontalRule();
 
 
@@ -63,7 +63,7 @@ class main
 				
 }
 
-class stringManipulation
+class stringManip
 {
 
  static public function stringReplace($src,$target,$str)
