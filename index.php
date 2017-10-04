@@ -90,6 +90,17 @@ return ord($string1);
 
 }
 
+static public function stringCharacter($string1,$value)
+
+{
+
+return substr($string1,$value);
+
+}
+
+
+
+
 
 }
 
