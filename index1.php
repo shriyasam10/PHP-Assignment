@@ -4,9 +4,6 @@ $obj = new main();
 
 class main
 {
-
-	private $html; 
-
 	public function __construct()
 	{
 
@@ -20,36 +17,39 @@ class main
 	echo "The value of \$year: ";
 	print_r($year);
 
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingOne("Replace String");
-	$this->html .= stringManip::stringreplace('-','/',$date);
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingOne("Replace String");
+	echo  stringManip::stringreplace('-','/',$date);
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("Compare String");
-	$this->html .= stringManip::stringcompare($date,$tar);
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingThree("Compare String");
+	echo stringManip::stringcompare($date,$tar);
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingOne("Word Count");
-	$this->html .= stringManip::stringwordcount($date);
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingOne("Word Count");
+	echo stringManip::stringwordcount($date);
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("String Length");
-	$this->html .= stringManip::stringlength($date);
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingThree("String Length");
+	echo stringManip::stringlength($date);
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingOne("ASCII Value");
-	$this->html .= stringManip::stringASCII('2');
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingOne("ASCII Value");
+	echo stringManip::stringASCII('2');
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("Last two characters of the string are: ");
-	$this->html .= stringManip::stringcharacter($date,8);
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingThree("Last two characters of the string are: ");
+	echo stringManip::stringcharacter($date,8);
+	echo htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingOne("String into Array:");
-	$this->html .= stringManip::stringexplode("/",$date);
-	$this->html .= htmlTags::horizontalRule();
+	echo htmlTags::headingOne("String into Array:");
+	echo stringManip::stringexplode("/",$date);
+	echo htmlTags::horizontalRule();
 
+	echo htmlTags::headingThree("Leap Year demo : ");
+	echo leapYear::forLeap($year);
+	echo htmlTags::horizontalRule();
 
 }
  	
@@ -117,6 +117,32 @@ static public function stringcharacter($string1,$value)
 
 }
 
+class leapYear 
+{
+	static public function forLeap($years) {
+		foreach($years as $year) { 
+			leapYear::checkLeapYear($year);
+		}
+	}
+
+	static public function arrayIf($years) {
+		for($i=0; $i<count($years); $i++) {
+			leapYear::checkLeapYear($years[$i]);
+		}
+	}
+	
+	static public function checkLeapYear($year) {
+		$val=(($year%4==0)and($year%100!=0)or($year%400==0));
+		switch($val) {
+			case 1:
+				echo 'Leap Year</br>';
+				break;
+			default:
+				echo 'Not a leap year</br>';
+				break;
+			}
+		}
+	}
 class htmlTags
 {
   static public function horizontalRule() 
@@ -135,27 +161,4 @@ class htmlTags
   }
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
