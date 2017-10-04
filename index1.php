@@ -135,10 +135,10 @@ class leapYear
 		$val=(($year%4==0)and($year%100!=0)or($year%400==0));
 		switch($val) {
 			case 1:
-				echo 'Leap Year</br>';
+				echo ''.$year.' is a Leap Year</br>';
 				break;
 			default:
-				echo 'Not a leap year</br>';
+				echo ''.$year.' is not a leap year</br>';
 				break;
 			}
 		}
