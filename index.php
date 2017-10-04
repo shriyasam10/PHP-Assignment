@@ -31,6 +31,19 @@ class main
 	$this->html .= stringManip::stringCompare($date,$tar);
 	$this->html .= htmlTags::horizontalRule();
 
+	$this->html .= htmlTags::headingThree("Word Count Example");
+	$this->html .= stringManip::stringWordcount($date);
+	$this->html .= htmlTags::horizontalRule();
+
+	$this->html .= htmlTags::headingThree("String Length Example");
+	$this->html .= stringManip::stringLength($date);
+	$this->html .= htmlTags::horizontalRule();
+
+
+
+
+
+
 
 
 	}
