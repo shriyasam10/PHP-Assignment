@@ -82,7 +82,13 @@ static public function stringLength($string1)
 return strlen($string1);
 }
 
+static public function stringASCII($string1)
 
+{
+
+return ord($string1);
+
+}
 
 
 }
