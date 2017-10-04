@@ -19,35 +19,35 @@ class main
 	$year = array("2012", "396", "300","2000", "1100", "1089");
 	echo "The value of \$year: ";
 	print_r($year);
-	// echo '<hr>';
+
 	$this->html .= htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("Replace String Example");
-	$this->html .= stringManip::stringReplace('-','/',$date);
+	$this->html .= htmlTags::headingOne("Replace String");
+	$this->html .= stringManip::stringreplace('-','/',$date);
 	$this->html .= htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("Compare String Example");
-	$this->html .= stringManip::stringCompare($date,$tar);
+	$this->html .= htmlTags::headingThree("Compare String");
+	$this->html .= stringManip::stringcompare($date,$tar);
 	$this->html .= htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("Word Count Example");
-	$this->html .= stringManip::stringWordcount($date);
+	$this->html .= htmlTags::headingOne("Word Count");
+	$this->html .= stringManip::stringwordcount($date);
 	$this->html .= htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("String Length Example");
-	$this->html .= stringManip::stringLength($date);
+	$this->html .= htmlTags::headingThree("String Length");
+	$this->html .= stringManip::stringlength($date);
 	$this->html .= htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("ASCII Value Example");
+	$this->html .= htmlTags::headingOne("ASCII Value");
 	$this->html .= stringManip::stringASCII('2');
 	$this->html .= htmlTags::horizontalRule();
 
 	$this->html .= htmlTags::headingThree("Last two characters of the string are: ");
-	$this->html .= stringManip::stringCharacter($date,8);
+	$this->html .= stringManip::stringcharacter($date,8);
 	$this->html .= htmlTags::horizontalRule();
 
-	$this->html .= htmlTags::headingThree("String into Array Example:");
-	$this->html .= stringManip::stringExplode("/",$date);
+	$this->html .= htmlTags::headingOne("String into Array:");
+	$this->html .= stringManip::stringexplode("/",$date);
 	$this->html .= htmlTags::horizontalRule();
 
 
@@ -66,13 +66,13 @@ class main
 class stringManip
 {
 
- static public function stringReplace($src,$target,$str)
+ static public function stringreplace($src,$target,$str)
 	{
 	return str_replace($src,$target,$str);
 	 }
 
 
-static public function stringCompare($string1,$string2)
+static public function stringcompare($string1,$string2)
 	 {
         	if($string1==$string2)
 				 
@@ -89,12 +89,12 @@ static public function stringCompare($string1,$string2)
 		}
 	}
 
- static public function stringWordcount($string1)
+ static public function stringwordcount($string1)
   {
 	return str_word_count($string1);
   }
 
- static public function stringLength($string1)
+ static public function stringlength($string1)
   {
 	 return strlen($string1);
   }
@@ -104,20 +104,18 @@ static public function stringASCII($string1)
 	 return ord($string1);
  }
 
-static public function stringCharacter($string1,$value)
+static public function stringcharacter($string1,$value)
  {
 	 return substr($string1,$value);
  }
 
- static public function stringExplode($value,$string1)
+ static public function stringexplode($value,$string1)
  {
 	 print_r (explode($value,$string1));
  }
 
 
 }
-
-class arrayLeap{}
 
 class htmlTags
 {
